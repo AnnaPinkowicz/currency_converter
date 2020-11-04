@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kursy walut</title>
+</head>
+<body style="background-color:lightGrey;font-family: Verdana ">
+<h1 style="background-color:lightGrey;font-family: Verdana "> Currency Calculator </h1>
+<div style="background-color: white; font-size: 15px;padding: 10px; box-shadow: 3px 3px grey; margin-bottom: 10px">
+    <form method="post">
+        <label for="code">Choose currency</label>
+        <select name="code">
+            {% for code in codes %}
+                <option value="{{ code }}">{{ code }}</option>
+
+            {% endfor %}
+
+
+        </select>
+        <label for="code">How much?</label>
+        <input type="number" name="amount" min="1" step=".01">
+        <button type="submit">Convert</button>
+
+    </form>
+
+</div>
+<div style="background-color: white; font-size: 15px;border-color: #f1c40f;padding: 10px; box-shadow: 3px 3px grey; margin-bottom: 10px">
+        <h1 style="background-color:lightGrey;font-family: Verdana "> {{ result }} </h1>
+
+</div>
+
+
+
+
+
+
+
+
